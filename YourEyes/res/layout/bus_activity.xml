@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context="org.YourEyes.demo.BusActivity"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="9"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <Spinner
+                android:id="@+id/sp_api"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:background="#FFDFDF"
+                android:entries="@array/api"
+                android:paddingLeft="20dp"
+                android:popupBackground="#FFDFDF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:id="@+id/inputBus_layout">
+            <EditText
+                android:layout_width="0px"
+                android:layout_weight="4"
+                android:layout_height="match_parent"
+                android:id="@+id/inputBus" />
+
+            <Button
+                android:id="@+id/inputBus_ok"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="#FFBABA"
+                android:text="검색"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:id="@+id/inputStation_layout">
+
+            <EditText
+                android:id="@+id/inputStation"
+                android:layout_width="0px"
+                android:layout_weight="4"
+                android:layout_height="match_parent" />
+            <Button
+                android:id="@+id/inputStation_ok"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="#FFBABA"
+                android:text="검색"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/laneInfo_layout"
+            android:visibility="gone"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/laneInfo" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/direction_btn_layout"
+                android:gravity="center">
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="1 방향"
+                    android:id="@+id/direction1_btn"
+                    android:background="@drawable/direction_btn"
+                    android:layout_marginRight="10dp"/>
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="2 방향"
+                    android:id="@+id/direction2_btn"
+                    android:background="@drawable/direction_btn" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <ListView
+            android:id="@+id/stationList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/inputStation_layout"
+            ></ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:id="@+id/voice_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:src="@drawable/speech_btn"
+            tools:src="@drawable/speech_btn"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

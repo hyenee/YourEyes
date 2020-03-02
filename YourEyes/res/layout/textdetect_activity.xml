@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.YourEyes.demo.TextDetectActivity"
+    android:layout_alignParentTop="true"
+    android:background="#ffffff">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scrollView"
+            android:layout_marginLeft="20px"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="처리시간" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/scrollView"
+                        android:layout_marginLeft="20px"
+                        android:gravity="center"
+                        android:text="인식할 문자를 찍어주세요." />
+                </LinearLayout>
+            </ScrollView>
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="20px" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_OCR"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="#FAC87F"
+        android:gravity="center"
+        android:text="사진찍기"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+</RelativeLayout>
